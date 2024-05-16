@@ -4,7 +4,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 # exchange csv file to dataframe
-dt = pd.read_csv('data/Mumbai_House_Price.csv')
+dt = pd.read_csv('data\Mumbai_House_Price.csv')
 
 
 def preprocess(df: pd.DataFrame) -> pd.DataFrame:
@@ -88,7 +88,7 @@ def process_age(df) -> pd.DataFrame:
 
 # Convert DataFrane to csv file
 def insert_data(df):
-    df.to_csv('/data/processed_data.csv', index = False)
+    df.to_csv('data/processed_data.csv', index = False)
 
 
 if __name__ == '__main__':
