@@ -4,7 +4,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 # exchange csv file to dataframe
-dt = pd.read_csv('data\Mumbai_House_Price.csv')
+dt = pd.read_csv('data/Mumbai_House_Price.csv')
 
 
 def preprocess(df: pd.DataFrame) -> pd.DataFrame:
