@@ -44,7 +44,7 @@ def preprocess(df: pd.DataFrame) -> pd.DataFrame:
     df.drop(['price_unit', 'price', 'locality', 'type'], axis = 1, inplace = True)
 
     # Drop rows that have unknown value
-    df = df.replace("Unknown", value = np.NaN)
+    df = df.replace("Unknown", np.NaN)
     df = df.dropna()
 
     # df = pd.concat([df, dummies.drop('other', axis='columns')], axis='columns')
@@ -88,7 +88,8 @@ def process_age(df) -> pd.DataFrame:
 
 # Convert DataFrane to csv file
 def insert_data(df):
-    df.to_csv('../data/processed_data.csv', index = False)
+    df_encoded = pd.get_dummies(df, columns=['region'])
+    df_encoded.to_csv('../data/processed_data.csv', index = False)
 
 
 if __name__ == '__main__':
