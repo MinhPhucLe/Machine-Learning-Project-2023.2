@@ -88,7 +88,7 @@ def process_age(df) -> pd.DataFrame:
 
 # Convert DataFrane to csv file
 def insert_data(df):
-    df.to_csv('data/processed_data_1.csv', index = False)
+    df.to_csv('data/processed_data_phuc.csv', index = False)
 
 
 if __name__ == '__main__':
