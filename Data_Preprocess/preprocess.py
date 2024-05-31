@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+from sklearn import preprocessing
 
 # exchange csv file to dataframe
 dt = pd.read_csv('../data/Mumbai_House_Price.csv')
